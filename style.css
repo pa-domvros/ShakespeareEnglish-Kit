@@ -1,0 +1,154 @@
+/* === Basic Style === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fdf6e3; /* Soft, warm beige background */
+  color: #6b4f4b;     /* Dark, warm brown text for readability */
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* === Header === */
+header {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem; /* Adjusted padding */
+  border-bottom: 1px solid #e0ddd3; /* Subtle separator in a matching tone */
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #4a6b4c; /* Muted, earthy green for a professional look */
+  margin-bottom: 0.5rem;
+}
+
+header p em {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #856f6b; /* Lighter brown for the credit line */
+  margin: 0.2rem 0;
+  font-style: italic;
+}
+
+/* === MODIFIED Style for the update notice === */
+.update-notice {
+  font-size: 1.8em;   /* Doubled the size from 0.9em to 1.8em */
+  font-weight: bold;  /* Added bold styling */
+  color: #795548;
+  margin: 0.5rem 0 0;
+}
+/* ============================================= */
+
+
+/* Social Media Icon Styles */
+.social-media {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Space between icons */
+  align-items: center;
+}
+
+.social-media a {
+  display: inline-block;
+  color: #6b4f4b; /* Dark brown from theme */
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media a:hover {
+  transform: scale(1.15); /* Slight zoom on hover */
+  color: #4a6b4c; /* Green on hover */
+}
+
+header .social-media svg {
+  width: 26px; /* Uniform icon size */
+  height: 26px;
+  fill: currentColor; /* Inherits the color from the 'a' tag */
+}
+
+
+/* === Main Content === */
+main {
+  max-width: 750px;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+/* === Collapsible Sections (Accordion) === */
+details {
+  background: #fffcf4; /* A creamy, off-white for the collapsibles */
+  border: 1px solid #e0ddd3;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+details:hover {
+  transform: translateY(-2px); /* Lifts the element on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+details[open] {
+  background: #fbf3df; /* Slightly darker beige when open to show it's active */
+}
+
+summary {
+  list-style: none; /* Remove default marker */
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #795548; /* A darker, rich brown for the title */
+}
+
+/* Custom animated arrow marker */
+summary::before {
+  content: '▶';
+  margin-right: 0.8rem;
+  font-size: 0.8em;
+  color: #4a6b4c; /* Green marker to match the main header */
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+details[open] > summary::before {
+  transform: rotate(90deg); /* Rotates the arrow when open */
+}
+
+/* Remove default arrow in WebKit browsers (Chrome, Safari) */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* === Sub-link list inside collapsibles === */
+details > ul {
+  list-style-type: none;
+  padding: 0 1.5rem 1rem 3.5rem; /* Aligned with summary text */
+  margin-top: 0.5rem;
+  border-top: 1px solid #e9e4d9;
+}
+
+details > ul li {
+  margin-top: 0.75rem;
+}
+
+details > ul li a {
+  color: #5e8c61; /* A slightly lighter green for links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+details > ul li a:hover {
+  text-decoration: underline;
+  color: #4a6b4c; /* Darkens to the main green on hover */
+}
+
+
+/* === Footer === */
+footer {
+  background-color: #5c4b44; /* Dark brown footer for contrast */
+  color: #fdf6e3;           /* Light beige text on dark background */
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+}
